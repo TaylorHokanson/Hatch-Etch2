@@ -2,7 +2,6 @@
     
     svgs are rotated to random orientations (but maintain their centers)
     first svg is circular
-    why does the seem to be the wrong size after pressing P?
     press p to generate a new image and save as pdf
 
     JSL x THO
