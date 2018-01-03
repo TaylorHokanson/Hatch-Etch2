@@ -34,8 +34,8 @@ void setup()
   size(300, 277); //size of composition
   image(img, 0, 0);
 
-  cols = width/cellsize/2;
-  rows = height/cellsize/2;
+  cols = width/cellsize;
+  rows = height/cellsize;
 
 
   //load hatch svgs
@@ -101,34 +101,34 @@ void hatchIt(){
       // Translate to the location
       pushMatrix();
 
-      translate(x*2, y*2);
+      translate(x, y);
 
       // Pick SVGs based on pixel brightness
       if (b<40) {
 
         rotate(random(PI)); 
         hatch1.scale(random(scaleMin,scaleMax));
-        shape(hatch1, 0, 0, cellsize*2, cellsize*2);
+        shape(hatch1, 0, 0, cellsize, cellsize);
       } else if (b<80) {
 
         rotate(random(PI)); 
         hatch2.scale(random(scaleMin,scaleMax));
-        shape(hatch2, 0, 0, cellsize*2, cellsize*2);
+        shape(hatch2, 0, 0, cellsize, cellsize);
       } else if (b<100) {
 
         rotate(random(PI)); 
         hatch3.scale(random(scaleMin,scaleMax));
-        shape(hatch3, 0, 0, cellsize*2, cellsize*2);
+        shape(hatch3, 0, 0, cellsize, cellsize);
       } else if (b<160) {
 
         rotate(random(PI)); 
         hatch4.scale(random(scaleMin,scaleMax));
-        shape(hatch4, 0, 0, cellsize*2, cellsize*2);
+        shape(hatch4, 0, 0, cellsize, cellsize);
       } else if (b<200) {
 
         rotate(random(PI)); 
         hatch5.scale(random(scaleMin,scaleMax));
-        shape(hatch5, 0, cellsize, cellsize*2, cellsize*2);
+        shape(hatch5, 0, cellsize, cellsize, cellsize);
       }
       popMatrix();
       hatch1.resetMatrix();
